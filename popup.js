@@ -1,13 +1,32 @@
 //Jonatan-Andersson/bootstrap5_presets
 
-function showAlertBox(){
-let box = document.getElementsByClassName("alert-box")[1];
-    box.style.display = "block";
-
+function showAlertBox(boxId="null"){
+    if (boxId == null){
+        let boxes = document.getElementsByClassName("alert-box");
+        let box = [];
+        for (let i = 0; i < boxes.length; i++;){
+             box = document.getElementsByClassName("alert-box")[i];
+            box.style.display = "block";
+        }
+        
+    }else {
+        let box = document.getElementsById(boxId)[1];
+        box.style.display = "block";
+    }
 }
-function hideAlertBox(){
-let box = document.getElementsByClassName("alert-box")[1];
-    box.style.display = "none";
+function hideAlertBox(boxId="null"){
+    if (boxId == null){
+        let boxes = document.getElementsByClassName("alert-box");
+        let box = [];
+        for (let i = 0; i < boxes.length; i++;){
+             box = document.getElementsByClassName("alert-box")[i];
+            box.style.display = "none";
+        }
+        
+    }else {
+        let box = document.getElementsById(boxId);
+        box.style.display = "none";
+    }
 }
 
 function createAlertBox(alertId=null, title="Alert", msg="Are you sure?", appendTo="body"){
