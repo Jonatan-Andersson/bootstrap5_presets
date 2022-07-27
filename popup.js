@@ -17,7 +17,7 @@ function showAlertBox(boxId="null"){
 function hideAlertBox(boxId="null"){
     if (boxId == null){
         let boxes = document.getElementsByClassName("alert-box");
-        let box = [];
+        let box;
         for (let i = 0; i < boxes.length; i++;){
              box = document.getElementsByClassName("alert-box")[i];
             box.style.display = "none";
