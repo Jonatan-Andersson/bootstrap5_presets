@@ -1,30 +1,30 @@
 //Jonatan-Andersson/bootstrap5_presets
-
-function showAlertBox(boxId="null"){
+function showAlertBox(boxId=null){
+    let box = null;
     if (boxId == null){
         let boxes = document.getElementsByClassName("alert-box");
-        let box;
         for (let i = 0; i < boxes.length; i++){
-             box = document.getElementsByClassName("alert-box")[i];
+            box = document.getElementsByClassName("alert-box")[i];
             box.style.display = "block";
         }
         
     }else {
-        let box = document.getElementsById(boxId)[1];
+        box = document.getElementById(boxId);
         box.style.display = "block";
     }
 }
-function hideAlertBox(boxId="null"){
+function hideAlertBox(boxId){
+    let box = null;
     if (boxId == null){
         let boxes = document.getElementsByClassName("alert-box");
-        let box;
+        
         for (let i = 0; i < boxes.length; i++){
              box = document.getElementsByClassName("alert-box")[i];
             box.style.display = "none";
         }
         
     }else {
-        let box = document.getElementsById(boxId);
+        box = document.getElementById(boxId);
         box.style.display = "none";
     }
 }
