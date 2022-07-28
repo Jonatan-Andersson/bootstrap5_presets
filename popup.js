@@ -17,7 +17,6 @@ function hideAlertBox(boxId){
     let box = null;
     if (boxId == null){
         let boxes = document.getElementsByClassName("alert-box");
-        
         for (let i = 0; i < boxes.length; i++){
              box = document.getElementsByClassName("alert-box")[i];
             box.style.display = "none";
@@ -68,7 +67,6 @@ function createAlertBox(alertId=null, title="Alert", msg="Are you sure?", append
     titleBox.innerHTML = title;
     cardHeader.appendChild(titleBox);
 
-
     //card body
     let cardBodyClasses = "card-body";
     cardBody.className = cardBodyClasses;
@@ -96,6 +94,7 @@ function createAlertBox(alertId=null, title="Alert", msg="Are you sure?", append
     let cancel = document.createElement("input"); 
     cancel.type = "button";
     cancel.value = "Cancel";
+    cancel.onclick = hideAlertBox(alertId);
     let cancelBtnClasses = "btn btn-secondary";
     cancel.className = cancelBtnClasses;
     cardFooterCol_no.appendChild(cancel);
