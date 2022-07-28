@@ -4,7 +4,7 @@ function showAlertBox(boxId="null"){
     if (boxId == null){
         let boxes = document.getElementsByClassName("alert-box");
         let box;
-        for (let i = 0; i < boxes.length; i++;){
+        for (let i = 0; i < boxes.length; i++){
              box = document.getElementsByClassName("alert-box")[i];
             box.style.display = "block";
         }
@@ -18,7 +18,7 @@ function hideAlertBox(boxId="null"){
     if (boxId == null){
         let boxes = document.getElementsByClassName("alert-box");
         let box;
-        for (let i = 0; i < boxes.length; i++;){
+        for (let i = 0; i < boxes.length; i++){
              box = document.getElementsByClassName("alert-box")[i];
             box.style.display = "none";
         }
